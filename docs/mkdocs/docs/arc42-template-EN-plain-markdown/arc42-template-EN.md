@@ -4,206 +4,212 @@ arc42, the template for documentation of software and system architecture.
 
 Template Version 8.2 EN. (based upon AsciiDoc version), January 2023
 
-Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and contributors. See <https://arc42.org>.
+Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and contributors. See {https://arc42.org}.
 
-# Introduction and Goals
+---
 
-## Requirements Overview
+## Introduction and Goals
 
-## Quality Goals
+### Requirements Overview
 
-## Stakeholders
+### Quality Goals
+
+### Stakeholders
 
 | Role/Name   | Contact     | Expectations |
 |-------------|-------------|--------------|
-| *\<Role-1>* | *\<Contact-1>* | *\<Expectation-1>* |
-| *\<Role-2>* | *\<Contact-2>* | *\<Expectation-2>* |
+| *{Role-1}* | *{Contact-1}* | *{Expectation-1}* |
+| *{Role-2}* | *{Contact-2}* | *{Expectation-2}* |
 
-# Architecture Constraints
+## Architecture Constraints
 
-# System Scope and Context
+## System Scope and Context
 
-## Business Context
+### Business Context
 
-**\<Diagram or Table>**
+**{Diagram or Table}**
 
-**\<optionally: Explanation of external domain interfaces>**
+**{optionally: Explanation of external domain interfaces}**
 
-## Technical Context
+### Technical Context
 
-**\<Diagram or Table>**
+**{Diagram or Table}**
 
-**\<optionally: Explanation of technical interfaces>**
+**{optionally: Explanation of technical interfaces}**
 
-**\<Mapping Input/Output to Channels>**
+**{Mapping Input/Output to Channels}**
 
-# Solution Strategy
+## Solution Strategy
 
-# Building Block View
+## Building Block View
 
-## Whitebox Overall System
+### Whitebox Overall System
 
-***\<Overview Diagram>***
+**{Overview Diagram}**
 
-**Motivation**
+#### Motivation
 
-*\<text explanation>*
+**{text explanation}**
 
-**Contained Building Blocks**
+#### Contained Building Blocks
 
-*\<Description of contained building block (black boxes)>*
+**{Description of contained building block (black boxes)}**
 
-**Important Interfaces**
+#### Important Interfaces
 
-*\<Description of important interfaces>*
+**{Description of important interfaces}**
 
-### \<Name black box 1>
+#### Black Box Details
 
-**Purpose/Responsibility**
+**{Name black box 1}**
 
-*\<Purpose/Responsibility>*
+- **Purpose/Responsibility**
 
-**Interface(s)**
+  **{Purpose/Responsibility}**
 
-*\<Interface(s)>*
+- **Interface(s)**
 
-**(Optional) Quality/Performance Characteristics**
+  **{Interface(s)}**
 
-*\<(Optional) Quality/Performance Characteristics>*
+- **(Optional) Quality/Performance Characteristics**
 
-**(Optional) Directory/File Location**
+  **{(Optional) Quality/Performance Characteristics}**
 
-*\<(Optional) Directory/File Location>*
+- **(Optional) Directory/File Location**
 
-**(Optional) Fulfilled Requirements**
+  **{(Optional) Directory/File Location}**
 
-*\<(Optional) Fulfilled Requirements>*
+- **(Optional) Fulfilled Requirements**
 
-**(Optional) Open Issues/Problems/Risks**
+  **{(Optional) Fulfilled Requirements}**
 
-*\<(optional) Open Issues/Problems/Risks>*
+- **(Optional) Open Issues/Problems/Risks**
 
-### \<Name black box 2>
+  **{(optional) Open Issues/Problems/Risks}**
 
-*\<black box template>*
+##### {Name black box 2}
 
-### \<Name black box n>
+**{black box template}**
 
-*\<black box template>*
+##### {Name black box n}
 
-### \<Name interface 1>
+**{black box template}**
 
-...
+##### Interface Details
 
-### \<Name interface m>
-
-## Level 2
-
-### White Box *\<building block 1>*
-
-*\<white box template>*
-
-### White Box *\<building block 2>*
-
-*\<white box template>*
+###### {Name interface 1}
 
 ...
 
-### White Box *\<building block m>*
+###### {Name interface m}
 
-*\<white box template>*
+### Level 2
 
-## Level 3
+#### White Box *{building block 1}*
 
-### White Box \<\_building block x.1\_\>
+**{white box template}**
 
-*\<white box template>*
+#### White Box *{building block 2}*
 
-### White Box \<\_building block x.2\_\>
-
-*\<white box template>*
-
-### White Box \<\_building block y.1\_\>
-
-*\<white box template>*
-
-# Runtime View
-
-## \<Runtime Scenario 1>
-
-- *\<insert runtime diagram or textual description of the scenario>*
-
-- *\<insert description of the notable aspects of the interactions between the building block instances depicted in this diagram.\>*
-
-## \<Runtime Scenario 2>
-
-## ...
-
-## \<Runtime Scenario n>
-
-# Deployment View
-
-## Infrastructure Level 1
-
-***\<Overview Diagram>***
-
-**Motivation**
-
-*\<explanation in text form>*
-
-**Quality and/or Performance Features**
-
-*\<explanation in text form>*
-
-**Mapping of Building Blocks to Infrastructure**
-
-*\<description of the mapping>*
-
-## Infrastructure Level 2
-
-### *\<Infrastructure Element 1>*
-
-*\<diagram + explanation>*
-
-### *\<Infrastructure Element 2>*
-
-*\<diagram + explanation>*
+**{white box template}**
 
 ...
 
-### *\<Infrastructure Element n>*
+#### White Box *{building block m}*
 
-*\<diagram + explanation>*
+**{white box template}**
 
-# Cross-cutting Concepts
+### Level 3
 
-## *\<Concept 1>*
+#### White Box {_building block x.1_}
 
-*\<explanation>*
+**{white box template}**
 
-## *\<Concept 2>*
+#### White Box {_building block x.2_}
 
-*\<explanation>*
+**{white box template}**
+
+#### White Box {_building block y.1_}
+
+**{white box template}**
+
+## Runtime View
+
+### {Runtime Scenario 1}
+
+- **{insert runtime diagram or textual description of the scenario}**
+
+- **{insert description of the notable aspects of the interactions between the building block instances depicted in this diagram.}**
+
+### {Runtime Scenario 2}
 
 ...
 
-## *\<Concept n>*
+### {Runtime Scenario n}
 
-*\<explanation>*
+## Deployment View
 
-# Architecture Decisions
+### Infrastructure Level 1
 
-# Quality Requirements
+**{Overview Diagram}**
 
-## Quality Tree
+#### Motivation
 
-## Quality Scenarios
+**{explanation in text form}**
 
-# Risks and Technical Debts
+#### Quality and/or Performance Features
 
-# Glossary
+**{explanation in text form}**
+
+#### Mapping of Building Blocks to Infrastructure
+
+**{description of the mapping}**
+
+### Infrastructure Level 2
+
+#### *{Infrastructure Element 1}*
+
+**{diagram + explanation}**
+
+#### *{Infrastructure Element 2}*
+
+**{diagram + explanation}**
+
+...
+
+#### *{Infrastructure Element n}*
+
+**{diagram + explanation}**
+
+## Cross-cutting Concepts
+
+### *{Concept 1}*
+
+**{explanation}**
+
+### *{Concept 2}*
+
+**{explanation}**
+
+...
+
+### *{Concept n}*
+
+**{explanation}**
+
+## Architecture Decisions
+
+## Quality Requirements
+
+### Quality Tree
+
+### Quality Scenarios
+
+## Risks and Technical Debts
+
+## Glossary
 
 | Term     | Definition  |
 |----------|-------------|
-| *\<Term-1>* | *\<definition-1>* |
-| *\<Term-2>* | *\<definition-2>* |
+| *{Term-1}* | *{definition-1}* |
+| *{Term-2}* | *{definition-2}* |
