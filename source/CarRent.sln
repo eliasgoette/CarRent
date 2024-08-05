@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRent", "..\..\..\..\..\.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRent.Tests", "..\..\..\..\..\..\..\..\source\repos\ZbW\Software Architecture & Design\Github\eliasgoette\CarRent\source\tests\CarRent.Tests\CarRent.Tests.csproj", "{75D62BE1-9684-475A-9259-ABCAEEF44FAD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{86BAA634-F449-4B6C-B029-313938D61AE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C799B2F6-3236-40B8-B656-6EAD91188703}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3420738B-2884-4BB7-8E24-1709375E0245} = {86BAA634-F449-4B6C-B029-313938D61AE4}
+		{75D62BE1-9684-475A-9259-ABCAEEF44FAD} = {C799B2F6-3236-40B8-B656-6EAD91188703}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {29870CC2-7C01-49E4-BF97-F0EBD3CB69F2}
