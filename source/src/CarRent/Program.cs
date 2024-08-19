@@ -1,16 +1,17 @@
-using Microsoft.EntityFrameworkCore;
+using CarRent.Domain.Common;
 using CarRent.Feature.Cars.Domain;
 using CarRent.Feature.Cars.Infrastructure;
 using CarRent.Persistence;
 using FastEndpoints;
-using CarRent.Domain.Common;
+using FastEndpoints.Swagger;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddFastEndpoints();
+builder.Services.SwaggerDocument();
 builder.Services.AddDbContext<CarRentDbContext>(options =>
 {
     options.UseSqlServer("Server=localhost;Database=carrent;User Id=sa;Password=Password123;Encrypt=false;");
@@ -19,8 +20,6 @@ builder.Services.AddDbContext<CarRentDbContext>(options =>
 
 builder.Services.AddScoped<ICarRepository, CarRepository>();
 builder.Services.AddScoped<IUnitOfWork>(provider => provider.GetRequiredService<CarRentDbContext>());
-
-builder.Services.AddFastEndpoints();
 
 var app = builder.Build();
 
@@ -33,8 +32,8 @@ if (app.Environment.IsDevelopment())
     context.Database.EnsureDeleted();
     context.Database.EnsureCreated();
 
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerGen();
+    app.UseSwaggerUi();
 }
 
 app.UseHttpsRedirection();
