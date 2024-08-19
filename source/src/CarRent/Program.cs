@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using CarRent.Feature.Cars.Domain;
 using CarRent.Feature.Cars.Infrastructure;
 using CarRent.Persistence;
+using FastEndpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,10 +12,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CarRentDbContext>(options =>
 {
-    options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=carrent2;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+    options.UseSqlServer("Server=localhost;Database=carrent;User Id=sa;Password=Password123;Encrypt=false;");
 });
 
+
 builder.Services.AddScoped<ICarRepository, CarRepository>();
+builder.Services.AddFastEndpoints();
 
 var app = builder.Build();
 
@@ -32,5 +35,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseFastEndpoints();
 
 app.Run();

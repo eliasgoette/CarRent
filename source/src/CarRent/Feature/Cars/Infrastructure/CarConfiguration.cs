@@ -12,6 +12,17 @@ namespace CarRent.Feature.Cars.Infrastructure
 
             builder.Property(x => x.Name)
                    .HasMaxLength(256);
+
+            builder.HasData([
+                new Car {
+                    Id = Guid.NewGuid(),
+                    Name = "Benz"
+                },
+                new Car {
+                    Id = Guid.NewGuid(),
+                    Name = "GMC"
+                }
+            ]);
         }
     }
 }

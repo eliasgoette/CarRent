@@ -19,6 +19,11 @@ namespace CarRent.Feature.Cars.Infrastructure
             _context.Set<Car>().Add(entity);
         }
 
+        public IEnumerable<Car> GetAll()
+        {
+            return _context.Set<Car>();
+        }
+
         public Car FindById(Guid id)
         {
             return _context.Set<Car>().Find([id])!;
