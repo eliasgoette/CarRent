@@ -8,7 +8,17 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.7" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="FastEndpoints" Version="5.28.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Domain\API\" />
+    <Folder Include="Domain\Application\" />
+    <Folder Include="Domain\Infrastructure\" />
+    <Folder Include="Feature\Cars\Application\" />
+    <Folder Include="Feature\Cars\Interface\" />
   </ItemGroup>
 
 </Project>
