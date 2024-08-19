@@ -3,32 +3,32 @@ using FastEndpoints;
 
 namespace CarRent.Feature.Cars.API
 {
-    public class GetCarsEndpoint : EndpointWithoutRequest<List<CarResponse>>
+    public class GetCarByIdEndpoint : EndpointWithoutRequest
     {
         private ICarRepository _repository;
 
-        public GetCarsEndpoint(ICarRepository repository)
+        public GetCarByIdEndpoint(ICarRepository repository)
         {
             _repository = repository;
         }
 
         public override void Configure()
         {
-            Get("/cars");
+            Get("/cars/{id}");
             AllowAnonymous();
         }
 
         public override async Task HandleAsync(CancellationToken ct)
         {
-            var cars = _repository.GetAll();
-
-            var carResponses = cars.Select(car => new CarResponse
+            var id = Route<Guid>("id");
+            var car = _repository.FindById(id);
+            var carResponse = new CarResponse
             {
                 Id = car.Id,
                 Name = car.Name
-            }).ToList();
+            };
 
-            await SendAsync(carResponses, cancellation: ct);
+            await SendAsync(carResponse, 200, ct);
         }
     }
 }

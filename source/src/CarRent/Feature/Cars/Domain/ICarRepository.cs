@@ -6,6 +6,7 @@ namespace CarRent.Feature.Cars.Domain
     {
         void Add(Car entity);
         IEnumerable<Car> GetAll();
+        Car FindById(Guid id);
         void Remove(Car entity);
     }
 }

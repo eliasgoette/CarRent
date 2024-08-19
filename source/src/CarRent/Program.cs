@@ -3,6 +3,7 @@ using CarRent.Feature.Cars.Domain;
 using CarRent.Feature.Cars.Infrastructure;
 using CarRent.Persistence;
 using FastEndpoints;
+using CarRent.Domain.Common;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,8 @@ builder.Services.AddDbContext<CarRentDbContext>(options =>
 
 
 builder.Services.AddScoped<ICarRepository, CarRepository>();
+builder.Services.AddScoped<IUnitOfWork>(provider => provider.GetRequiredService<CarRentDbContext>());
+
 builder.Services.AddFastEndpoints();
 
 var app = builder.Build();
