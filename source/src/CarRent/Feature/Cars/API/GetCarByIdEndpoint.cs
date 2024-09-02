@@ -25,7 +25,7 @@ namespace CarRent.Feature.Cars.API
             var carResponse = new CarResponse
             {
                 Id = car.Id,
-                Name = car.Name
+                Model = car.Model,
             };
 
             await SendAsync(carResponse, 200, ct);

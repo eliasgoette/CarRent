@@ -26,8 +26,7 @@ namespace CarRent.Feature.Cars.API
         {
             var newCar = new Car
             {
-                Id = Guid.NewGuid(),
-                Name = req.Name
+                Model = req.Model
             };
 
             _repository.Add(newCar);
@@ -36,7 +35,7 @@ namespace CarRent.Feature.Cars.API
             var res = new CarResponse
             {
                 Id = newCar.Id,
-                Name = newCar.Name
+                Model = newCar.Model
             };
 
             await SendAsync(res, 200, ct);

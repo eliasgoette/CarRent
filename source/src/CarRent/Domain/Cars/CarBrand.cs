@@ -2,9 +2,9 @@
 
 namespace CarRent.Domain.Cars
 {
-    public class Car : Entity, IAggregateRoot
+    public class CarBrand : Entity, IAggregateRoot
     {
-        public CarModel Model { get; set; }
+        public string BrandName { get; set; }
         public IReadOnlyList<IDomainEvent> Events { get; }
     }
 }

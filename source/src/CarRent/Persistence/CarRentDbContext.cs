@@ -21,6 +21,9 @@ namespace CarRent.Persistence
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new CarConfiguration());
+            modelBuilder.ApplyConfiguration(new CarModelConfiguration());
+            modelBuilder.ApplyConfiguration(new CarBrandConfiguration());
+            modelBuilder.ApplyConfiguration(new VehicleCategoryConfiguration());
         }
     }
 }

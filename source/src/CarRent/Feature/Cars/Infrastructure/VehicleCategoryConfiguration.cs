@@ -4,15 +4,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CarRent.Feature.Cars.Infrastructure
 {
-    public class CarConfiguration : IEntityTypeConfiguration<Car>
+    public class VehicleCategoryConfiguration : IEntityTypeConfiguration<VehicleCategory>
     {
-        public void Configure(EntityTypeBuilder<Car> builder)
+        public void Configure(EntityTypeBuilder<VehicleCategory> builder)
         {
             builder.HasKey(x => x.Id);
-
-            builder.HasOne(x => x.Model)
-                .WithMany()
-                .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasData([
             ]);

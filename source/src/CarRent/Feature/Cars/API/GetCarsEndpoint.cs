@@ -25,7 +25,7 @@ namespace CarRent.Feature.Cars.API
             var carResponses = cars.Select(car => new CarResponse
             {
                 Id = car.Id,
-                Name = car.Name
+                Model = car.Model
             }).ToList();
 
             await SendAsync(carResponses, cancellation: ct);
