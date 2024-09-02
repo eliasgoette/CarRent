@@ -10,10 +10,6 @@ namespace CarRent.Feature.Cars.Infrastructure
         {
             builder.HasKey(x => x.Id);
 
-            builder.HasOne(x => x.Model)
-                .WithMany()
-                .OnDelete(DeleteBehavior.Cascade);
-
             builder.HasData([
             ]);
         }

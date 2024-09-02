@@ -4,7 +4,14 @@ namespace CarRent.Domain.Cars
 {
     public class CarBrand : Entity, IAggregateRoot
     {
-        public string BrandName { get; set; }
-        public IReadOnlyList<IDomainEvent> Events { get; }
+        private CarBrand() { }
+
+        public CarBrand(string brandName)
+        {
+            BrandName = brandName;
+        }
+
+        public string BrandName { get; private set; }
+        public IReadOnlyList<IDomainEvent> Events { get; } = [];
     }
 }

@@ -22,13 +22,21 @@ namespace CarRent.Feature.Cars.API
         {
             var id = Route<Guid>("id");
             var car = _repository.FindById(id);
-            var carResponse = new CarResponse
-            {
-                Id = car.Id,
-                Model = car.Model,
-            };
 
-            await SendAsync(carResponse, 200, ct);
+            if (car != null)
+            {
+                var carResponse = new CarResponse
+                {
+                    Id = car.Id,
+                    Model = car.Model,
+                };
+    
+                await SendAsync(carResponse, 200, ct);
+            } else
+            {
+                await SendAsync(null, 404, ct);
+            }
+
         }
     }
 }

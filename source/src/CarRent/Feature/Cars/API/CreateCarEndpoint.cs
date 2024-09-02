@@ -25,9 +25,9 @@ namespace CarRent.Feature.Cars.API
         public override async Task HandleAsync(CarRequest req, CancellationToken ct)
         {
             var newCar = new Car
-            {
-                Model = req.Model
-            };
+            (
+                req.Model
+            );
 
             _repository.Add(newCar);
             _unitOfWork.Commit();
