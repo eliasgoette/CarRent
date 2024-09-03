@@ -9,5 +9,6 @@ namespace CarRent.Feature.Cars.Domain
         Car FindById(Guid id);
         void Remove(Car entity);
         void RemoveById(Guid id);
+        void Update(Car car);
     }
 }

@@ -13,9 +13,9 @@ namespace CarRent.Domain.Cars
             Category = category;
         }
 
-        public CarBrand Brand { get; private set; }
-        public string ModelName { get; private set; }
-        public VehicleCategory Category { get; private set; }
+        public CarBrand Brand { get; set; }
+        public string ModelName { get; set; }
+        public VehicleCategory Category { get; set; }
 
         public IReadOnlyList<IDomainEvent> Events { get; } = [];
     }

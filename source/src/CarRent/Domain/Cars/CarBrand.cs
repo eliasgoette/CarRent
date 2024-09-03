@@ -11,7 +11,7 @@ namespace CarRent.Domain.Cars
             BrandName = brandName;
         }
 
-        public string BrandName { get; private set; }
+        public string BrandName { get; set; }
         public IReadOnlyList<IDomainEvent> Events { get; } = [];
     }
 }

@@ -34,7 +34,7 @@ namespace CarRent.Feature.Cars.API
                 await SendAsync(carResponse, 200, ct);
             } else
             {
-                await SendAsync(null, 404, ct);
+                await SendNotFoundAsync(ct);
             }
 
         }

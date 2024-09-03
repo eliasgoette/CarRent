@@ -11,7 +11,7 @@ namespace CarRent.Domain.Cars
             Model = model;
         }
 
-        public CarModel Model { get; private set; }
+        public CarModel Model { get; set; }
         public IReadOnlyList<IDomainEvent> Events { get; } = [];
     }
 }

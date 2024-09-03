@@ -17,7 +17,6 @@ namespace CarRent.Feature.Cars.Infrastructure
         public void Add(Car entity)
         {
             _context.Set<Car>().Add(entity);
-            _context.SaveChanges();
         }
 
         public IEnumerable<Car> GetAll()
@@ -38,7 +37,6 @@ namespace CarRent.Feature.Cars.Infrastructure
         public void Remove(Car entity)
         {
             _context.Set<Car>().Remove(entity);
-            _context.SaveChanges();
         }
 
         public void RemoveById(Guid id)
@@ -49,6 +47,11 @@ namespace CarRent.Feature.Cars.Infrastructure
             {
                 Remove(entity);
             }
+        }
+
+        public void Update(Car car)
+        {
+            _context.Update(car);
         }
     }
 }
